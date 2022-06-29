@@ -15,5 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - name: GitTools
-        uses: GitTools/actions@v0.9.13
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.7
+        with:
+          versionSpec: '5.x'
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          useConfigFile:
+            description: Whether to use a custom configuration file.
+            required: true
+            default: false
+          configFilePath:
+            description: Optional path to config file (defaults to GitVersion.yml).
+            required: true
+            default: 'GitVersion.yml'
