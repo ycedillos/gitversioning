@@ -23,11 +23,3 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          useConfigFile:
-            description: Whether to use a custom configuration file.
-            required: true
-            default: false
-          configFilePath:
-            description: Optional path to config file (defaults to GitVersion.yml).
-            required: true
-            default: 'GitVersion.yml'
