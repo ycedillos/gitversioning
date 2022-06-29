@@ -3,7 +3,7 @@
 # ignore:
 #   sha: []
 # merge-message-formats: {}
-next-version: 1.0
+#next-version: 1.0
 assembly-versioning-scheme: MajorMinorPatch
 assembly-file-versioning-scheme: MajorMinorPatchTag
 assembly-informational-format: '{InformationalVersion}'
